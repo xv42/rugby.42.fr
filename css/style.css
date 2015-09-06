@@ -1,0 +1,23 @@
+body {
+background:url('../img/bg.gif');
+background-repeat: repeat;
+font-family: Century Gothic, sans-serif;
+padding-top: 50px;
+padding-bottom: 20px;
+}
+
+.vert {
+    display: inline-block;
+    vertical-align: center;
+    float: none;
+}
+.part {
+    max-width: 100%;
+}
+
+.logo {
+    padding-bottom: 20px;
+}
+.panel-default > .panel-heading {
+    background: #404040; color: #ffffff;
+}
