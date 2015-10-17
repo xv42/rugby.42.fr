@@ -24,3 +24,7 @@ body {
     background: #404040;
     color: #ffffff;
 }
+
+.social-section .panel-body {
+    font-size: 42px;
+}
