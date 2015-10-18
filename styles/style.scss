@@ -39,9 +39,27 @@ body {
     .table {
         font-size: 15px;
 
-        tr td {
-            line-height: 24px;
-            vertical-align: bottom;
+        &:hover {
+            tr {
+                opacity: 0.52;
+                transform: scale(0.992);
+                background-color: #FAFAFA;
+            }
+        }
+
+        tr {
+            transition-duration: $animationsDuration;
+
+            &:hover {
+                opacity: 1.0;
+                transform: scale(1.01);
+                background-color: #FFF;
+            }
+
+            td {
+                line-height: 24px;
+                vertical-align: bottom;
+            }
         }
         tr:first-child td {
             padding-top: 8px;
