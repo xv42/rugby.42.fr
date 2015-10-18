@@ -2,28 +2,27 @@ $ambianceGrey: #404040;
 $animationsDuration: 0.2s;
 
 body {
-    background: url('../images/background.gif') fixed;
-    background-repeat: repeat;
+    background: url('../images/background.gif') fixed repeat;
     font-family: "Helvetica", "Arial", sans-serif;
     padding-top: 42px;
     padding-bottom: 20px;
 }
 
-.logo {
+.header-section {
     padding-top: 0;
     padding-bottom: 22px;
     text-align: center;
 
-    img {
+     .logo {
         width: 31%;
         max-width: 160px;
+        transition-duration: $animationsDuration;
+        transform: scale(1.0);
+
+        &:hover {
+            transform: rotate(-4.2deg) scale(1.12);
+        }
     }
-}
- 
-.vert {
-    display: inline-block;
-    vertical-align: center;
-    float: none;
 }
 
 .panel-default {
@@ -36,25 +35,37 @@ body {
             text-transform: uppercase;
         }
     }
-    .table {
 
-        tr:first-child td {
-            padding-top: 7px;
+    .table {
+        font-size: 15px;
+
+        tr td {
+            line-height: 24px;
+            vertical-align: bottom;
         }
-        tr:last-child td {
-            padding-bottom: 7px;
+        tr:first-child td {
+            padding-top: 8px;
         }
     }
 }
 
 .partners-section {
-    .partner-logo {
-        max-width: 100%;
-        transition-duration: $animationsDuration;
-        transform: scale(1.0);
+    .panel-body {
+        padding: 27px 0;
 
-        &:hover {
-            transform: scale(1.05);
+        .partner-logo {
+            display: inline-block;
+            vertical-align: center;
+            float: none;
+            transition-duration: $animationsDuration;
+            transform: scale(1.0);
+    
+            &:hover {
+                transform: scale(1.05);
+            }
+            img {
+                max-width: 100%;
+            }
         }
     }
 }
@@ -62,7 +73,7 @@ body {
 .social-section {
     .panel-title {
         font-family: "Montserrat";
-        color: $ambianceGrey;
+        color: lighten($ambianceGrey, 13%);
         text-transform: uppercase;
         margin-top: 29px;
         padding-bottom: 7px;
@@ -70,11 +81,9 @@ body {
     }
 
     .panel-body {
-
         .icon {
             transition-duration: $animationsDuration;
             transform: scale(1.0);
-            color: #FFF;
 
             .fa {
                 font-size: 49px;
@@ -86,9 +95,18 @@ body {
                 color: #3B5998;
             }
 
+            p {
+                color: #999;
+                opacity: 0.0;
+                transition-duration: $animationsDuration;
+            }
+
             &:hover {
                 transform: scale(1.1);
-                color: #999;
+
+                p {
+                    opacity: 1.0;
+                }
             }
         }
     }
