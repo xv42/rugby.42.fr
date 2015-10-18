@@ -1,3 +1,5 @@
 .DS_Store
 .sass-cache
 styles/style.css*
+node_modules/
+/typings
