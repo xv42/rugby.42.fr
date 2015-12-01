@@ -3,3 +3,4 @@
 styles/style.css*
 node_modules/
 /typings
+dist/

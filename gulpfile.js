@@ -14,6 +14,15 @@ gulp.task('sass:watch', function () {
 	gulp.watch('./styles/*.scss', ['sass'])
 })
 
-gulp.task('build', ['sass'])
+gulp.task('copyImages', function () {
+    gulp.src('src/images/**/*')
+        .pipe(gulp.dest('./dist/images'))
+})
+
+gulp.task('build', ['sass', 'copyImages'], function () {
+    gulp.src(['src/**/*.css', 'src/**/**.html'])
+        .pipe(gulp.dest('./dist'))
+})
+
 gulp.task('watch', ['sass:watch'])
 gulp.task('default', ['watch'])
