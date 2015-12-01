@@ -16,12 +16,6 @@ body {
      .logo {
         width: 31%;
         max-width: 160px;
-        transition-duration: $animationsDuration;
-        transform: scale(1.0);
-
-        &:hover {
-            transform: rotate(-4.2deg) scale(1.12);
-        }
     }
 }
 
@@ -39,23 +33,7 @@ body {
     .table {
         font-size: 15px;
 
-        &:hover {
-            tr {
-                opacity: 0.52;
-                transform: scale(0.992);
-                background-color: #FAFAFA;
-            }
-        }
-
         tr {
-            transition-duration: $animationsDuration;
-
-            &:hover {
-                opacity: 1.0;
-                transform: scale(1.01);
-                background-color: #FFF;
-            }
-
             td {
                 line-height: 24px;
                 vertical-align: bottom;
@@ -75,12 +53,7 @@ body {
             display: inline-block;
             vertical-align: center;
             float: none;
-            transition-duration: $animationsDuration;
-            transform: scale(1.0);
-    
-            &:hover {
-                transform: scale(1.05);
-            }
+
             img {
                 max-width: 100%;
             }
