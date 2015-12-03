@@ -26,7 +26,7 @@ gulp.task('build', ['sass', 'copyImages'], function () {
 })
 
 gulp.task('serve-dev', serve('src'))
-gulp.task('dev', ['watch', 'serve-dev'])
-
 gulp.task('watch', ['sass:watch'])
+
+gulp.task('dev', ['watch', 'serve-dev'])
 gulp.task('default', ['build'])
