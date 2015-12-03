@@ -2,6 +2,7 @@
   "name": "XV42",
   "dependencies": {
     "gulp": "^3.9.0",
-    "gulp-sass": "^2.0.4"
+    "gulp-sass": "^2.0.4",
+    "gulp-serve": "^1.2.0"
   }
 }

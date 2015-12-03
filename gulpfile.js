@@ -1,5 +1,6 @@
 var gulp = require('gulp')
 var sass = require('gulp-sass')
+var serve = require('gulp-serve')
 
 gulp.task('sass', function () {
 	gulp.src('./styles/*.scss')
@@ -24,5 +25,8 @@ gulp.task('build', ['sass', 'copyImages'], function () {
         .pipe(gulp.dest('./dist'))
 })
 
+gulp.task('serve-dev', serve('src'))
+gulp.task('dev', ['watch', 'serve-dev'])
+
 gulp.task('watch', ['sass:watch'])
-gulp.task('default', ['watch'])
+gulp.task('default', ['build'])
